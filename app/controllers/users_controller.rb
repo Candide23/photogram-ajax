@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[ show liked feed discover ]
 
   before_action :must_be_owner_to_view, only: %i[ feed discover ]
-
   def index
     @users = @q.result
   end
